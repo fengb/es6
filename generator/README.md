@@ -52,5 +52,5 @@ gen.next()      // terminates
 
 ### async-await
 
-![async-await](https://github.com/fengb/es6/blob/master/async-await.png?raw=true)
-[example](https://github.com/fengb/es6/blob/master/async-await.js)
+![async-await](https://github.com/fengb/es6/blob/master/generator/async-await.png?raw=true)
+[example](https://github.com/fengb/es6/blob/master/generator/async-await.js)
