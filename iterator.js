@@ -5,6 +5,17 @@ export function* counter(){
   }
 }
 
+export function* timeout(ms, iterator){
+  let expiration = new Date() + ms
+  for(let val of iterator){
+    if(new Date() > expiration){
+      throw new Error(`Timeout! ${duration}`)
+    }
+
+    yield val
+  }
+}
+
 export class Lazy {
   constructor(array){
     this.iterator = array
