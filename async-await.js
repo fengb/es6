@@ -16,7 +16,9 @@ function getJSONSync(url){
   throw new Error('No sync!')
 }
 
-// FAKE
+/* Cons:
+ * - synchronous: blocks world until response
+ */
 export function synchronous(username){
   let user = getJsonSync(`https://api.github.com/users/${username}`)
 
@@ -54,6 +56,11 @@ function getJsonCallback(url, callback){
   })
 }
 
+/* Cons:
+ * - callback hell: pyramid of doom
+ * - difficult to parallelize
+ * - poor error handling
+ */
 export function callback(username, success, error = () => {}){
   let userReq = getJsonCallback(`https://api.github.com/users/${username}`, (user) => {
 
@@ -95,6 +102,11 @@ function getJsonPromise(url){
   })
 }
 
+/* Cons:
+ * - interlaces control flow and logic
+ * - context switches between promise chains
+ * - difficult to handle all errors
+ */
 export function promise(username){
   let ret = { name: username }
   let cheatFollowers
@@ -120,6 +132,9 @@ export function promise(username){
   })
 }
 
+/* Cons:
+ * - none?
+ */
 export function coPromise(username){
   return co(function*(){
     let user = yield getJsonPromise(`https://api.github.com/users/${username}`)
