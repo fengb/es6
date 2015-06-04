@@ -43,14 +43,14 @@ gen.next({})    // => [object Object]
 gen.next()      // terminates
 ```
 
-![vaguely useful lifecycle diagram](https://github.com/fengb/es6/blob/master/generator-lifecycle.png?raw=true)
+![vaguely useful lifecycle diagram](https://github.com/fengb/es6/blob/master/generator/lifecycle.png?raw=true)
 
 ### Iterators
 
-![iterator](https://github.com/fengb/es6/blob/master/iterator.png?raw=true)
-[example](https://github.com/fengb/es6/blob/master/iterator.js)
+![iterator](https://github.com/fengb/es6/blob/master/generator/iterator.png?raw=true)
+[example](https://github.com/fengb/es6/blob/master/generator/iterator.js)
 
 ### async-await
 
-![async-await](https://github.com/fengb/es6/blob/master/co.png?raw=true)
+![async-await](https://github.com/fengb/es6/blob/master/async-await.png?raw=true)
 [example](https://github.com/fengb/es6/blob/master/async-await.js)

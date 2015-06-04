@@ -1,6 +1,6 @@
 import https from 'https'
 import url from 'url'
-import co from './vendor/co'
+import co from '../vendor/co'
 
 function options(string){
   let options = url.parse(string)
